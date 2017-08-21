@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Document</title>
+  <style type="text/css">
+  .negation:not(p){color:blue;}  
+  .negation { color: black; }
+  .negation .default:not([data-red="no"]) { color: red; }
+  .negation .default a { color: green; }
+  .negation .default a:not([rel="green"], [rel="default"]) { color: blue; }
+  </style>
+</head>
+<body>
+<div class="negation">
+
+  <div class="default" data-red="no">
+
+    <a href="#" rel="green">这里是绿色</a>
+
+    <a href="#" rel="default">这里也是绿色</a>
+
+    <a href="#" rel="blue">这里是蓝色</a>
+
+  </div>
+
+  <div class="default" data-red="no">
+
+    这里是黑色
+
+  </div>
+
+  <div class="default" data-red="yes">
+
+    这里是红色
+
+  </div>
+
+</div>
+</body>
+</html>
